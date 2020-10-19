@@ -29,7 +29,7 @@ const user = {
 	"id": 3001
 }
 
-const apiUrl = "http://dapr-bet.kainiindustries.net/v1.0/invoke/races/method/get"
+const apiUrl = "https://dapr-bet.kainiindustries.net/v1.0/invoke/races/method/get"
 
 function Row(props) {
 	const { row } = props;

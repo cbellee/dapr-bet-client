@@ -23,7 +23,7 @@ const user = {
 	"id": 3001
 }
 
-const apiUrl = "http://dapr-bet.kainiindustries.net/v1.0/invoke/bets/method/getbyemail?email=" + user.email
+const apiUrl = "https://dapr-bet.kainiindustries.net/v1.0/invoke/bets/method/getbyemail?email=" + user.email
 
 function Row(props) {
 	const { row } = props;
@@ -49,7 +49,7 @@ Row.propTypes = {
 	row: PropTypes.shape({
 		raceid: PropTypes.number.isRequired,
 		horseid: PropTypes.number.isRequired,
-		horse: PropTypes.string.isRequired,
+		horsename: PropTypes.string.isRequired,
 		place: PropTypes.number.isRequired,
 		odds: PropTypes.string.isRequired,
 	}).isRequired,

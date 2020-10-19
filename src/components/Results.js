@@ -22,7 +22,7 @@ const user = {
 	"id": 3001
 }
 
-const apiUrl = "http://dapr-bet.kainiindustries.net/v1.0/invoke/results/method/get"
+const apiUrl = "https://dapr-bet.kainiindustries.net/v1.0/invoke/results/method/get"
 
 function Row(props) {
 	const { row } = props;
@@ -34,7 +34,7 @@ function Row(props) {
 				<TableCell>
 				</TableCell>
 				<TableCell align="left">{row.place}</TableCell>
-				<TableCell align="left">{row.horse}</TableCell>
+				<TableCell align="left">{row.horsename}</TableCell>
 				<TableCell align="left">{row.racename}</TableCell>
 			</TableRow>
 		</React.Fragment>
@@ -46,7 +46,7 @@ Row.propTypes = {
 		raceid: PropTypes.number.isRequired,
 		racename: PropTypes.string.isRequired,
 		horseid: PropTypes.number.isRequired,
-		horse: PropTypes.string.isRequired,
+		horsename: PropTypes.string.isRequired,
 		place: PropTypes.number.isRequired,
 		odds: PropTypes.string.isRequired,
 	}).isRequired,

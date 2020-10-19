@@ -19,7 +19,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-const apiUrl = "http://dapr-bet.kainiindustries.net/v1.0/invoke/bets/method/add"
+const apiUrl = "https://dapr-bet.kainiindustries.net/v1.0/invoke/bets/method/add"
 
 export default function BetCartDialog(props) {
 	const { bets } = props;
@@ -68,9 +68,11 @@ export default function BetCartDialog(props) {
 			} else if (i < parseInt(k[1])) {
 				arr.push(object);
 				object = {};
-				if (object[k[0]] === "raceid" || object[k[0]] === "horseid") {
+				if (!isNaN(value)) {
 					object[k[0]] = parseInt(value, 10);
-				}
+				} else {
+					object[k[0]] = value;
+				};
 				i += 1;
 			} else {
 				arr.push(object);
