@@ -10,6 +10,7 @@ import Toggle from "./components/Toggler.js"
 import Results from "./components/Results.js"
 import Races from './components/Races.js';
 import Bets from './components/Bets.js';
+import Header from './components/Header.js';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 	return (
 		<ThemeProvider theme={themeMode}>
 			<GlobalStyles />
+			<Header />
 			<BrowserRouter>
 				<div className="App">
 					<Toggle theme={theme} toggleTheme={themeToggler} />
